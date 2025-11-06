@@ -75,4 +75,8 @@ GD Support => enabled
 GD Version => bundled (2.1.0 compatible)
 
 4. Update folder path 
+<<<<<<< HEAD
 $folder = "test_images";  //in place of test_images change your path 
+=======
+$folder = "test_images";  //in place of test_images change your path 
+>>>>>>> aeff86d67c743d1d3a17939c6c7b8293de5a6ce6
