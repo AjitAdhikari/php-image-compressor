@@ -95,15 +95,15 @@
 +
 +### 2) Enable GD on your system
 +
-+Windows (XAMPP, WAMP, or manual PHP install)
++**Windows (XAMPP, WAMP, or manual PHP install)**
 +
-+1. Open your `php.ini` file — commonly:
++1. Open your `php.ini` file — commonly found at:
 +
 +```
 +C:\\xampp\\php\\php.ini
 +```
 +
-+2. Find the line that mentions the extension, for example:
++2. Locate the line:
 +
 +```ini
 +;extension=gd
@@ -115,23 +115,23 @@
 +extension=gd
 +```
 +
-+In newer PHP versions the name may be `gd2`:
++> In newer PHP versions it may appear as:
 +
 +```ini
 +extension=gd2
 +```
 +
-+4. Save `php.ini` and restart Apache. From an elevated command prompt you can run:
++4. Save `php.ini` and restart Apache:
 +
 +```powershell
-+# Stop and start Apache (example for Apache service named 'apache2.4')
++# Stop and start Apache (example service name)
 +net stop apache2.4
 +net start apache2.4
 +```
 +
-+Or restart XAMPP via the control panel.
++Or restart XAMPP through its control panel.
 +
-+Linux (Ubuntu / Debian)
++**Linux (Ubuntu / Debian)**
 +
 +```bash
 +sudo apt update
@@ -145,12 +145,12 @@
 +sudo systemctl restart php-fpm
 +```
 +
-+macOS (Homebrew PHP)
++**macOS (Homebrew PHP)**
 +
 +```bash
 +brew install gd
 +brew reinstall php
-+# then restart your web server / PHP-FPM as appropriate
++# Then restart your web server or PHP-FPM
 +```
 +
 +### 3) Verify GD is enabled
@@ -161,20 +161,20 @@
 +php -i | grep GD
 +```
 +
-+You should see output similar to:
++You should see output like:
 +
 +```
 +GD Support => enabled
 +GD Version => bundled (2.1.0 compatible)
 +```
 +
-+### 4) Update the folder path in your script
++### 4) Update your folder path in the script
 +
-+If your script expects an images folder, update the `$folder` variable to point to your images directory. Example PHP snippet:
++If your script expects an image folder, update the `$folder` variable:
 +
 +```php
-+$folder = "test_images"; // change this to your images folder path
++$folder = "test_images"; // change this to your actual images folder path
 +```
 +
-+That's it — after enabling GD and restarting your server, your PHP image scripts should be able to use the GD functions.
++After enabling GD and restarting your server, your PHP image optimization script will run successfully.
 *** End Patch
